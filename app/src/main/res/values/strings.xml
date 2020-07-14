@@ -1,0 +1,478 @@
+<resources>
+    <string name="app_name">Converter</string>
+    <string name="app_subname">Currency and Units</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="help">Help</string>
+    <string name="percent">This will calculate percentage of a given value. \n\nExample: use this to find out what is 5% of your income.</string>
+    <string name="discount">This will deduct the value by given percentage. \n\nExample: Use this to know what will be the final price of Rs. 1200 jacket after 25% discount. </string>
+    <string name="add">This will increase the value by given percentage. \n\nExample: Use this to know what will be the final price of Rs. 1200 jacket with 50% profit. </string>
+    <string name="find">Suppose you have seen an offer that say shop for Rs. 5000 and pay Rs. 2000. \n\nWhat percentage they are giving discount?\n\nTo find that use this. Provide original value in first field and discounted price in second.</string>
+    <string name="diff">It will calculate the difference(in years, months and days) between two dates. \n\nYou can use this to calculate your age. Just tap on calender and select your date of birth and current date in \"From\" and \"To\" fields respectively.</string>
+    <string name="addSub">Use this to find out future or past date.\n\nTap on calender and select the date to/from which you want to add/subtract years, months and days, Select the add or subtract option and enter years, months and days to be added/subtracted to the selected date. \n\nExample: Use this to know the date after 70 days.</string>
+    <string name="title_activity_help">Feedback</string>
+    <string name="feedback">Thanks for taking your precious time to give us feedback. We would like to use your feedback to improve the converter.</string>
+    <string name="title_activity_about_us">AboutUsActivity</string>
+    <string name="info_1">Currency rates of about 168 countries are provided on hourly basis. It is free of cost.</string>
+    <string name="info_2">Conversion of units like volume, length, weight, temperature, area, power, speed, time, data, energy, angle and pressure are available.</string>
+    <string name="pro">✔ No Ads\n✔ Pin Shortcuts to Home Screen\n✔ Only one time payment for all pro features</string>
+    <string name="rating"><b>Loved converter?</b>\nPlease rate and review our app in play store.</string>
+    <string name="fbError">Unable to open Facebook</string>
+    <string name="emailError">There is no email client installed.</string>
+    <string name="rateUsTitle">Rate Us</string>
+    <string name="getProTitle">Get Pro Version</string>
+    <string name="checkApp">Check this cool Converter App at:</string>
+    <string name="note">Note</string>
+    <string name="alert">No Internet</string>
+    <string name="success">Success</string>
+    <string name="fail">Failed</string>
+    <string name="inchFeet">Please enter less than 12 inch in feet. Ex: 5.11</string>
+    <string name="currencyFetchSuccess">All latest currency rates has been fetched successfully.</string>
+    <string name="currencyFetchFail">Failed to fetch latest currency rates.</string>
+    <string name="currencyUpdateSuccess">Currency rates updated successfully.</string>
+    <string name="currencyUpdateFail">Sorry. Currency Update failed.</string>
+    <string name="someError">"Sorry. Some error occurred.Try again.</string>
+    <string name="getLatestCurrency">To get latest currency rates you must have active internet connection.</string>
+    <string name="alreadyLatest">You already have latest currency rates.</string>
+    <string name="devicePastDate">Your device has past date.</string>
+    <string name="preferenceSaved">Your preferences has been saved successfully.</string>
+    <string name="currencyPref">Select currencies to which you convert most from BASE (Max. 10)</string>
+    <string name="currencyFreq">Select currencies you see frequently (Max. 10)</string>
+    <string name="noCurrSave">You have no currency rates saved. Please on internet to get currency rates.</string>
+    <string name="refreshCurr1">Currency rates are as on </string>
+    <string name="refreshCurr2">. Tap refresh button on top to update currency rates.</string>
+    <string name="settings">Settings</string>
+    <string name="Home">Home</string>
+    <string name="Age">Age</string>
+    <string name="dateCal">Date Calculation</string>
+    <string name="Percentage">Percentage</string>
+    <string name="Currency">Currency</string>
+    <string name="Volume">Volume</string>
+    <string name="Length">Length</string>
+    <string name="Weight">Weight</string>
+    <string name="WeightMass">Weight and Mass</string>
+    <string name="Temperature">Temperature</string>
+    <string name="Area">Area</string>
+    <string name="Power">Power</string>
+    <string name="Speed">Speed</string>
+    <string name="Time">Time</string>
+    <string name="Data">Data</string>
+    <string name="Energy">Energy</string>
+    <string name="Angle">Angle</string>
+    <string name="Pressure">Pressure</string>
+    <string name="Frequency">Frequency</string>
+    <string name="DataRate">Data Rate</string>
+    <string name="DataTransRate">Data Transfer Rate</string>
+    <string name="calculate">Calculate</string>
+    <string name="convert">Convert</string>
+    <string name="gopro">Go Pro</string>
+    <string name="adsfree">Ads Free Version</string>
+    <string name="calcPercent">Calculate Percentage</string>
+    <string name="discPercent">Discount Percentage</string>
+    <string name="addPercent">Add Percentage</string>
+    <string name="findPercent">Find Percentage</string>
+    <string name="is">is</string>
+    <string name="discountIs">Discount is :</string>
+    <string name="feedbackTitle">Feedback</string>
+    <string name="feedbackHead">Give Us Feedback</string>
+    <string name="name">Name</string>
+    <string name="subject">Subject</string>
+    <string name="idea">Please include a detailed description of your idea or suggestion</string>
+    <string name="send">Send</string>
+    <string name="currexcrates">Currency Exchange Rates</string>
+    <string name="providedby">Provided by - Open Exchange Rates</string>
+    <string name="unitconverter">Unit Converter</string>
+    <string name="info">Info</string>
+    <string name="version">Version </string>
+    <string name="off">% Off</string>
+    <string name="ok">Ok</string>
+    <string name="cancel">Cancel</string>
+    <string name="later">Later</string>
+    <string name="buynow">Buy Now</string>
+    <string name="ratenow">Rate Now</string>
+    <string name="fetchRates">Fetching currency rates...</string>
+    <string name="updaterates">Updating currency rates...</string>
+    <string name="swapdates">Swap Dates</string>
+    <string name="alreadyReview">Already Reviewed</string>
+    <string name="calAge">Calculate Age</string>
+    <string name="birthdate">Birthdate</string>
+    <string name="Today">Today</string>
+    <string name="yourAge">YOUR AGE</string>
+    <string name="Years">YEARS</string>
+    <string name="Months">MONTHS</string>
+    <string name="Days">DAYS</string>
+    <string name="TotalDays">TOTAL DAYS: </string>
+    <string name="pastFuture">Calculate Past or Future Date</string>
+    <string name="From">From</string>
+    <string name="Add">ADD</string>
+    <string name="Subtract">SUBTRACT</string>
+    <string name="Date">Date</string>
+    <string name="SeeResult">See your result here.</string>
+    <string name="dateAlert">Please select "Birthdate" less than \'Today\' date.</string>
+    <string name="selectDate">Please Select Date</string>
+    <string name="percentOf">% of </string>
+    <string name="share">Share</string>
+    <string name="favorites">Favorites</string>
+    <string name="newfeature">New Feature</string>
+    <string name="featuredetails">We have added a favorites section for you. It will be shown when you add items to it.\nTo Add items to favorites section tap and hold on any item and select option \"Add to Favorites\". \nItem will be added to favorites. Similarly you can remove items from favorites.</string>
+    <string name="showFav">Show Favorites</string>
+    <string name="switchToast">There is nothing to show in Favorites. Tap and hold on item to add.</string>
+    <string name="noresult">No Result</string>
+    <string name="favAdded">Added to Favorites.</string>
+    <string name="favRemoved">Removed From Favorites</string>
+    <string name="favRemEmpty">Removed From Favorites. Favorites Empty.</string>
+    <string name="alreadyInFav">Its already there in favorites</string>
+    <string name="nothingInFav">There is nothing to show in Favorites. Tap and hold on item to add.</string>
+    <string name="calci">Calculator</string>
+    <string name="bmi">BMI</string>
+    <string name="bmitext">Body Mass Index</string>
+    <string name="bmidesc">A measure of body fat.</string>
+    <string name="bmisource">Source: <a href="http://www.who.int">World Health Organization</a></string>
+    <string name="bmiranges"><b>Body Mass Index Ranges</b>\n1. Underweight BMI: Below 18.5\n2. Normal BMI: Between 18.5 and 24.9.\n3. Overweight BMI: Between 25.0 and 29.9.\n4. Obese BMI: Greater than or equal to 30.0</string>
+    <string name="bmiresult">00.0</string>
+    <string name="densityTitle">Density</string>
+    <string name="privacy">Privacy Policy</string>
+    <string name="ReArrange">Arrange Items</string>
+    <string name="msg_token_fmt" translatable="false">InstanceID Token: %s</string>
+
+    <string name="default_notification_channel_id" translatable="false">fcm_default_channel</string>
+    <string name="default_notification_channel_name" translatable="true">Weather</string>
+
+    <string name="zero">0</string>
+    <string name="one">1</string>
+    <string name="two">2</string>
+    <string name="three">3</string>
+    <string name="four">4</string>
+    <string name="five">5</string>
+    <string name="six">6</string>
+    <string name="seven">7</string>
+    <string name="eight">8</string>
+    <string name="nine">9</string>
+
+    <string name="plus">+</string>
+    <string name="minus">-</string>
+    <string name="multiplication">x</string>
+    <string name="division">/</string>
+    <string name="dot">.</string>
+    <string name="modulo">%</string>
+    <string name="equal">=</string>
+    <string name="delete">DEL</string>
+    <string name="clear">C</string>
+    <string name="RAD">RAD</string>
+    <string name="DEG">DEG</string>
+
+    <string name="parentheses_open">(</string>
+    <string name="parentheses_close">)</string>
+    <string name="root">"\u221A"</string>
+    <string name="power">^</string>
+    <string name="plus_or_minus">+/<Big>-</Big></string>
+    <string name="square">x<sup><small>2</small></sup></string>
+    <string name="factorial">!</string>
+    <string name="inverse">1/x</string>
+    <string name="e_constant">e</string>
+    <string name="pi">"\u03A0"</string>
+    <string name="log">log</string>
+    <string name="ln">ln</string>
+    <string name="sin">sin</string>
+    <string name="sin_inverse">sin<sup><small>-1</small></sup></string>
+    <string name="cos">cos</string>
+    <string name="cos_inverse">cos<sup><small>-1</small></sup></string>
+    <string name="tan">tan</string>
+    <string name="tan_inverse">tan<sup><small>-1</small></sup></string>
+    <string name="fcm_message">FCM Message</string>
+
+    <string-array name="bmiWeightArray">
+        <item>Kg</item>
+        <item>Lbs</item>
+    </string-array>
+    <string-array name="bmiHeightArray">
+        <item>Cm</item>
+        <item>Inches</item>
+    </string-array>
+    <string-array name="VolumeArray">
+        <item>Millilitres</item>
+        <item>Cubic Centimetres</item>
+        <item>Litres</item>
+        <item>Cubic Metres</item>
+        <item>Teaspoons(US)</item>
+        <item>Tablespoons(US)</item>
+        <item>Fluid Ounces(US)</item>
+        <item>Cups(US)</item>
+        <item>Pints(US)</item>
+        <item>Quarts(US)</item>
+        <item>Gallons(US)</item>
+        <item>Cubic Inches</item>
+        <item>Cubic feet</item>
+        <item>Cubic Yards</item>
+        <item>Teaspoons(UK)</item>
+        <item>Tablespoons(UK)</item>
+        <item>Fluid Ounces(UK)</item>
+        <item>Pints(UK)</item>
+        <item>Quarts(UK)</item>
+        <item>Gallons(UK)</item>
+    </string-array>
+    <string-array name="areaArray">
+        <item>Square Millimetres</item>
+        <item>Square Centimetres</item>
+        <item>Square Metres</item>
+        <item>Hectares</item>
+        <item>Square Kilometres</item>
+        <item>Square Inches</item>
+        <item>Square Feet</item>
+        <item>Square Yards</item>
+        <item>Acres</item>
+        <item>Square Miles</item>
+    </string-array>
+    <string-array name="dataArray">
+    <item>Bits</item>
+    <item>Bytes</item>
+    <item>Kilobits(Kb)</item>
+    <item>KiloBytes(KB)</item>
+    <item>Megabits(Mb)</item>
+    <item>MegaBytes(MB)</item>
+    <item>Gigabits(Gb)</item>
+    <item>GigaBytes(GB)</item>
+    <item>Terabits(Tb)</item>
+    <item>TeraBytes(TB)</item>
+    <item>Petabits(Pb)</item>
+    <item>PetaBytes(PB)</item>
+    <item>Exabits(Eb)</item>
+    <item>ExaBytes(EB)</item>
+    <item>Zettabits(Zb)</item>
+    <item>ZettaBytes(ZB)</item>
+    <item>Yottabits(Yb)</item>
+    <item>YottaBytes(YB)</item>
+    <item>Brontobits(Brb)</item>
+    <item>BrontoBytes(BrB)</item>
+    <item>Geopbits(Geb)</item>
+    <item>GeopBytes(GeB)</item>
+</string-array>
+    <string-array name="datarateArray">
+        <item>Bits/Sec</item>
+        <item>Bytes/Sec</item>
+        <item>Kilobits(Kb)/Sec</item>
+        <item>KiloBytes(KB)/Sec</item>
+        <item>Megabits(Mb)/Sec</item>
+        <item>MegaBytes(MB)/Sec</item>
+        <item>Gigabits(Gb)/Sec</item>
+        <item>GigaBytes(GB)/Sec</item>
+        <item>Terabits(Tb)/Sec</item>
+        <item>TeraBytes(TB)/Sec</item>
+        <item>Petabits(Pb)/Sec</item>
+        <item>PetaBytes(PB)/Sec</item>
+        <item>Exabits(Eb)/Sec</item>
+        <item>ExaBytes(EB)/Sec</item>
+        <item>Zettabits(Zb)/Sec</item>
+        <item>ZettaBytes(ZB)/Sec</item>
+        <item>Yottabits(Yb)/Sec</item>
+        <item>YottaBytes(YB)/Sec</item>
+        <item>Brontobits(Brb)/Sec</item>
+        <item>BrontoBytes(BrB)/Sec</item>
+        <item>Geopbits(Geb)/Sec</item>
+        <item>GeopBytes(GeB)/Sec</item>
+    </string-array>
+    <string-array name="lengthArray">
+        <item>Nanometres</item>
+        <item>Microns</item>
+        <item>Millimetres</item>
+        <item>Centimetres</item>
+        <item>Metres</item>
+        <item>Kilometres</item>
+        <item>Inches</item>
+        <item>Feet</item>
+        <item>Yards</item>
+        <item>Miles</item>
+    </string-array>
+    <string-array name="weightArray">
+        <item>Carats</item>
+        <item>Milligrams</item>
+        <item>Centigrams</item>
+        <item>Decigrams</item>
+        <item>Grams</item>
+        <item>Decagrams</item>
+        <item>Hectograms</item>
+        <item>Kilograms</item>
+        <item>Metric Tonnes</item>
+        <item>Ounces</item>
+        <item>Pounds</item>
+        <item>Stone</item>
+        <item>Short tons (US)</item>
+        <item>Long tons (UK)</item>
+    </string-array>
+    <string-array name="energyArray">
+        <item>Electron Volts</item>
+        <item>Joules</item>
+        <item>Kilojoules</item>
+        <item>Thermal Calories</item>
+        <item>Food Calories</item>
+        <item>Foot Pounds</item>
+        <item>British Thermal Units</item>
+    </string-array>
+    <string-array name="speedArray">
+        <item>Centimetres per second</item>
+        <item>Metres per Second</item>
+        <item>Kilometres per Hour</item>
+        <item>Feet per Second</item>
+        <item>Miles per Hour</item>
+        <item>Knots</item>
+        <item>Mach</item>
+    </string-array>
+    <string-array name="timeArray">
+        <item>Microseconds</item>
+        <item>Milliseconds</item>
+        <item>Seconds</item>
+        <item>Minutes</item>
+        <item>Hours</item>
+        <item>Days</item>
+        <item>Weeks</item>
+        <item>Years</item>
+    </string-array>
+    <string-array name="powerArray">
+        <item>Watts</item>
+        <item>Kilowatts</item>
+        <item>Horsepower (US)</item>
+        <item>Foot pounds/minute</item>
+        <item>BTUs/minute</item>
+    </string-array>
+    <!--<string-array name="pressureArray">
+        <item>Atmosphere</item>
+        <item>Bars</item>
+        <item>Kilopascals</item>
+        <item>Millimetre of Mercury</item>
+        <item>Pascals</item>
+        <item>Pounds per Square Inch</item>
+    </string-array>-->
+    <string-array name="pressureArray">
+        <item>pascal [Pa]</item>
+        <item>exapascal [EPa]</item>
+        <item>petapascal [PPa]</item>
+        <item>terapascal [TPa]</item>
+        <item>gigapascal [GPa]</item>
+        <item>megapascal [MPa]</item>
+        <item>kilopascal [kPa]</item>
+        <item>hectopascal [hPa]</item>
+        <item>dekapascal [daPa]</item>
+        <item>decipascal [dPa]</item>
+        <item>centipascal [cPa]</item>
+        <item>millipascal [mPa]</item>
+        <item>micropascal [µPa]</item>
+        <item>nanopascal [nPa]</item>
+        <item>picopascal [pPa]</item>
+        <item>femtopascal [fPa]</item>
+        <item>attopascal [aPa]</item>
+        <item>newton/square meter [N/m2]</item>
+        <item>newton/square centimeter [N/cm2]</item>
+        <item>newton/square millimeter [N/mm2]</item>
+        <item>kilonewton/square meter [kN/m2]</item>
+        <item>bar</item>
+        <item>millibar [mbar]</item>
+        <item>microbar [µbar]</item>
+        <item>dyne/square centimeter [dyn/cm2]</item>
+        <item>kilogram-force/square meter [kgf/m2]</item>
+        <item>kilogram-force/square centimeter</item>
+        <item>kilogram-force/square millimeter</item>
+        <item>gram-force/square centimeter [gf/cm2]</item>
+        <item>ton-force (short)/square foot</item>
+        <item>ton-force (short)/square inch</item>
+        <item>ton-force (long)/square foot</item>
+        <item>ton-force (long)/square inch</item>
+        <item>kip-force/square inch [kipf/in2]</item>
+        <item>ksi [ksi]</item>
+        <item>pound-force/square foot [lbf/ft2]</item>
+        <item>pound-force/square inch [lbf/in2]</item>
+        <item>psi [psi]</item>
+        <item>poundal/square foot [pdl/ft2]</item>
+        <item>torr [Torr]</item>
+        <item>centimeter mercury (0°C) [cmHg]</item>
+        <item>millimeter mercury (0°C) [mmHg]</item>
+        <item>inch mercury (32°F) [inHg]</item>
+        <item>inch mercury (60°F) [inHg]</item>
+        <item>centimeter water (4°C) [cmAq]</item>
+        <item>millimeter water (4°C) [mmAq]</item>
+        <item>inch water (4°C) [inAq]</item>
+        <item>foot water (4°C) [ftAq]</item>
+        <item>inch water (60°F) [inAq]</item>
+        <item>foot water (60°F) [ftAq]</item>
+        <item>atmosphere technical [at]</item>
+        <item>Standard atmosphere [atm]</item>
+    </string-array>
+    <string-array name="angleArray">
+        <item>Degree</item>
+        <item>Radians</item>
+        <item>Gradians</item>
+    </string-array>
+    <string-array name="tempArray">
+        <item>Celsius</item>
+        <item>Fahrenheit</item>
+        <item>Kelvin</item>
+    </string-array>
+    <string-array name="frequencyArray">
+        <item>Hertz</item>
+        <item>Kilohertz</item>
+        <item>Megahertz</item>
+        <item>Gigahertz</item>
+    </string-array>
+    <string-array name="ConvertArray">
+        <item>volume</item>
+        <item>length</item>
+        <item>weight</item>
+        <item>temperature</item>
+        <item>area</item>
+        <item>power</item>
+        <item>speed</item>
+        <item>time</item>
+        <item>data</item>
+        <item>energy</item>
+        <item>angle</item>
+        <item>pressure</item>
+        <item>currency</item>
+        <item>Frequency</item>
+        <item>Data Rate</item>
+    </string-array>
+    <string-array name="densityArray">
+        <item>kilogram/cubic meter [kg/m3]</item>
+        <item>kilogram/cubic centimeter [kg/cm3]</item>
+        <item>gram/cubic meter [g/m3]</item>
+        <item>gram/cubic centimeter [g/cm3, g/cc]</item>
+        <item>gram/cubic millimeter [g/mm3]</item>
+        <item>milligram/cubic meter [mg/m3]</item>
+        <item>milligram/cubic centimeter [mg/cm3]</item>
+        <item>milligram/cubic millimeter [mg/mm3]</item>
+        <item>exagram/liter [Eg/L]</item>
+        <item>petagram/liter [Pg/L]</item>
+        <item>teragram/liter [Tg/L]</item>
+        <item>gigagram/liter [Gg/L]</item>
+        <item>megagram/liter [Mg/L]</item>
+        <item>kilogram/liter [kg/L]</item>
+        <item>hectogram/liter [hg/L]</item>
+        <item>dekagram/liter [dag/L]</item>
+        <item>gram/liter [g/L]</item>
+        <item>decigram/liter [dg/L]</item>
+        <item>centigram/liter [cg/L]</item>
+        <item>milligram/liter [mg/L]</item>
+        <item>microgram/liter [µg/L]</item>
+        <item>nanogram/liter [ng/L]</item>
+        <item>picogram/liter [pg/L]</item>
+        <item>femtogram/liter [fg/L]</item>
+        <item>attogram/liter [ag/L]</item>
+        <item>pound/cubic inch [lb/in3]</item>
+        <item>pound/cubic foot [lb/ft3]</item>
+        <item>pound/cubic yard [lb/yd3]</item>
+        <item>pound/gallon (US) [lb/gal (US)]</item>
+        <item>pound/gallon (UK) [lb/gal (UK)]</item>
+        <item>ounce/cubic inch [oz/in3]</item>
+        <item>ounce/cubic foot [oz/ft3]</item>
+        <item>ounce/gallon (US) [oz/gal (US)]</item>
+        <item>ounce/gallon (UK) [oz/gal (UK)]</item>
+        <item>grain/gallon (US) [gr/gal (US)]</item>
+        <item>grain/gallon (UK) [gr/gal (UK)]</item>
+        <item>grain/cubic foot [gr/ft3]</item>
+        <item>ton (short)/cubic yard</item>
+        <item>ton (long)/cubic yard</item>
+        <item>slug/cubic foot [slug/ft3]</item>
+        <item>psi/1000 feet</item>
+        <item>Earth\'s density (mean)</item>
+
+    </string-array>
+
+</resources>

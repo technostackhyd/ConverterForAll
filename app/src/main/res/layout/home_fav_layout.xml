@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/favLayout"
+    android:orientation="vertical"
+    android:paddingTop="8dp">
+    <in.technostack.projects.converterforall.CustomViews.MyGridView
+        android:id="@+id/gridView3"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:drawSelectorOnTop="true"
+        android:gravity="center"
+        android:numColumns="3"
+        android:stretchMode="columnWidth"
+        android:verticalSpacing="6dp"
+        android:focusable="true"
+        android:clickable="true"
+        android:horizontalSpacing="6dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:paddingTop="2dp"
+        android:paddingBottom="2dp"
+        android:clipToPadding="false"
+        />
+    <TextView
+        android:id="@+id/favDetails"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="16dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="2dp"
+        android:elevation="2dp"
+        android:text="Its Empty here! tap and hold items from below sections to add here. To hide this section go to settings."
+        android:visibility="gone"
+        android:textColor="@color/textColor"
+        android:background="@drawable/layout_bg"/>
+</LinearLayout>

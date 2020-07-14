@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/cur_select"
+    android:background="@color/colorHomeGridBack"
+    android:padding="10dp">
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_toStartOf="@+id/currCheck"
+            android:layout_toLeftOf="@+id/currCheck">
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="24dp"
+                android:id="@+id/currSelectFlag"
+                android:layout_gravity="center_vertical" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:textColor="@color/textColor"
+                android:id="@+id/currSelectName"/>
+        </LinearLayout>
+        <CheckBox
+            android:id="@+id/currCheck"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_alignParentRight="true"/>
+</RelativeLayout>

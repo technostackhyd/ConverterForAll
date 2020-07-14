@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item android:title="" android:orderInCategory="101" android:id="@+id/action_notification1"
+        android:icon="@drawable/ic_more_vert_black_24dp" app:showAsAction="always">
+        <menu>
+            <item
+                android:id="@+id/feedback"
+                android:orderInCategory="100"
+                android:icon="@drawable/ic_feedback_black_24dp"
+                android:title="@string/feedbackTitle"
+                app:showAsAction="ifRoom"/>
+            <item
+                android:id="@+id/aboutus"
+                android:orderInCategory="100"
+                android:icon="@drawable/ic_info_outline_black_24dp"
+                android:title="@string/info"
+                android:iconTintMode="src_in"
+                app:showAsAction="ifRoom" />
+            <item
+                android:id="@+id/rate_us"
+                android:orderInCategory="100"
+                android:icon="@drawable/ic_stars_black_24dp"
+                android:title="@string/rateUsTitle"
+                android:iconTintMode="src_in"
+                app:showAsAction="ifRoom"/>
+            <item
+                android:id="@+id/share"
+                android:orderInCategory="100"
+                android:icon="@drawable/ic_share_black_24dp"
+                android:title="@string/share"
+                android:iconTintMode="src_in"
+                app:showAsAction="ifRoom"/>
+            <item
+                android:id="@+id/pro"
+                android:orderInCategory="100"
+                android:icon="@drawable/star_50"
+                android:title="@string/getProTitle"
+                android:iconTintMode="src_in"
+                app:showAsAction="ifRoom"/>
+            <item
+                android:id="@+id/settings"
+                android:orderInCategory="100"
+                android:icon="@drawable/ic_settings_black_24dp"
+                android:title="@string/settings"
+                android:iconTintMode="src_in"
+                app:showAsAction="ifRoom"/>
+        </menu>
+    </item>
+</menu>

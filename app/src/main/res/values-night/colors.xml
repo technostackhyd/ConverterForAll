@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#203343</color>
+    <color name="colorPrimaryDark">#01121D</color>
+    <color name="colorAccent">#34495E</color>
+    <!--<color name="colorAccent">#AA2E86C1</color>-->
+    <color name="MainBack">#182B3A</color>
+    <color name="Background">#01121D</color>
+    <color name="dark_grey">#FFFFFF</color>-->
+    <color name="grey">#919191</color>
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
+    <color name="transparent">#00000000</color>
+    <color name="transWhite">#CC203343</color>
+    <color name="creamyWhite">#01121D</color>
+    <color name="clr_color">#ff7006</color>
+    <color name="spinner_start_color">#34495E</color>
+    <color name="spinner_center_color">#CC203343</color>
+    <color name="spinner_end_color">#34495E</color>
+    <color name="colorBgFull">#102330</color>
+    <color name="colorHomeGridBack">@color/colorPrimary</color>
+    <color name="textColor">@color/white</color>
+</resources>

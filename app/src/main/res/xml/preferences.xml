@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.preference.PreferenceScreen xmlns:app="http://schemas.android.com/apk/res-auto">
+    <in.technostack.projects.converterforall.Classes.MyPreferencesCategory
+        app:key="theme_category"
+        app:title="Theme">
+        <ListPreference
+            app:key="themePref"
+            app:title="Choose theme"
+            app:defaultValue="default"
+            app:dialogTitle="Choose theme"
+            app:entries="@array/themeListArray"
+            app:entryValues="@array/themeEntryArray"
+            app:useSimpleSummaryProvider="true"/>
+    </in.technostack.projects.converterforall.Classes.MyPreferencesCategory>
+    <in.technostack.projects.converterforall.Classes.MyPreferencesCategory
+        app:key="calcultion_category"
+        app:title="Calculations">
+        <ListPreference
+            app:key="precisionPref"
+            app:title="Precision Length"
+            app:defaultValue="3"
+            app:dialogTitle="Choose Precesion Length"
+            app:entries="@array/precisionListArray"
+            app:entryValues="@array/precisionEntryArray"
+            app:useSimpleSummaryProvider="true" />
+    </in.technostack.projects.converterforall.Classes.MyPreferencesCategory>
+    <in.technostack.projects.converterforall.Classes.MyPreferencesCategory
+        app:key="favorite_category"
+        app:title="Favorite Section">
+        <SwitchPreference
+            app:key="favSwitch"
+            app:title="Show Favorite Section"
+            app:defaultValue="true"
+            app:summary="Off to hide favorite section from home screen"/>
+    </in.technostack.projects.converterforall.Classes.MyPreferencesCategory>
+</androidx.preference.PreferenceScreen>

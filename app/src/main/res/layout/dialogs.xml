@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorHomeGridBack">
+    <ProgressBar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/pBar"
+        android:layout_marginTop="10dp"/>
+    <TextView
+        android:id="@+id/loadText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Fetching rates..."
+        android:gravity="center"
+        android:textColor="@color/textColor"
+        android:layout_marginTop="10dp"
+        android:elevation="3dp"
+        android:padding="10dp"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="15dp"
+        android:id="@+id/title"
+        android:textColor="@color/white"
+        android:gravity="center_vertical"
+        android:textSize="18sp"
+        android:background="@color/colorPrimary"
+        android:fontFamily="@font/proxima_nova_bold"
+         />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/content"
+        android:gravity="fill"
+        android:padding="16dp"
+        android:lineSpacingExtra="10dp"
+        android:textSize="15dp"
+        android:fontFamily="@font/proxima_nova_semibold"/>
+    <CheckBox
+        android:id="@+id/dontShow"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Don't show again"
+        android:visibility="gone"
+        android:layout_marginLeft="15dp"
+        android:checked="false"
+        android:layout_marginBottom="16dp"/>
+</LinearLayout>

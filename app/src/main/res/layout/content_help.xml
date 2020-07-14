@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="in.technostack.projects.converterforall.HelpActivity"
+    tools:showIn="@layout/activity_help">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorHomeGridBack">
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentTop="true"
+            android:fillViewport="true">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <TextView
+                    android:id="@+id/contact_form_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginBottom="16dp"
+                    android:layout_marginTop="5dp"
+                    android:text="@string/feedbackHead"
+                    android:textColor="@color/textColor"
+                    android:textSize="28sp"/>
+
+                <EditText
+                    android:id="@+id/feedbackName"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:background="@color/Background"
+                    android:hint="@string/name"
+                    android:textSize="14sp"
+                    android:textColor="@color/textColor"
+                    android:inputType="textPersonName" />
+
+                <EditText
+                    android:id="@+id/feedbackSubject"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:padding="10dp"
+                    android:textColor="@color/textColor"
+                    android:textSize="14sp"
+                    android:background="@color/Background"
+                    android:hint="@string/subject"
+                    android:inputType="textEmailSubject" />
+
+                <EditText
+                    android:id="@+id/feedbackMsg"
+                    android:layout_width="fill_parent"
+                    android:layout_height="150dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@color/Background"
+                    android:padding="10dp"
+                    android:fontFamily="@font/proxima_nova_regular"
+                    android:textColor="@color/textColor"
+                    android:breakStrategy="high_quality"
+                    android:fitsSystemWindows="true"
+                    android:gravity="top"
+                    android:textSize="14sp"
+                    android:maxLength="1000"
+                    android:hint="@string/idea"
+                    android:inputType="textMultiLine"
+                    android:singleLine="false" />
+
+                <TextView
+                    android:id="@+id/text4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="20dp"
+                    android:layout_marginTop="10dp"
+                    android:text="@string/feedback"
+                    android:textColor="@color/textColor"
+                    android:textSize="14sp"
+                    android:fontFamily="@font/proxima_nova_regular"/>
+
+                <Button
+                    android:id="@+id/SendFeedback"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:background="@drawable/layout_bg_full_color_two"
+                    android:elevation="10dp"
+                    android:paddingLeft="70dp"
+                    android:paddingRight="70dp"
+                    android:text="@string/send"
+                    android:textColor="#fff"
+                    android:clickable="true"/>
+            </LinearLayout>
+        </ScrollView>
+    </RelativeLayout>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="20dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="20dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

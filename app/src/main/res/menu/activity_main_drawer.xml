@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:title="@string/adsfree">
+        <menu>
+            <item
+                android:id="@+id/pro"
+                android:icon="@drawable/star_50"
+                android:title="@string/getProTitle"
+                android:iconTintMode="src_in"/>
+        </menu>
+    </item>
+    <item
+        android:id="@+id/home"
+        android:icon="@drawable/ic_home_black_24dp"
+        android:title="@string/Home"
+        android:iconTint="@color/colorPrimary"
+        android:iconTintMode="src_in"/>
+    <item
+        android:id="@+id/privacy"
+        android:icon="@drawable/ic_lock"
+        android:title="@string/privacy"
+        android:iconTint="@color/colorPrimary"
+        android:iconTintMode="src_in"/>
+    <item
+        android:id="@+id/settings"
+        android:icon="@drawable/ic_settings_black_24dp"
+        android:title="@string/settings"
+        android:iconTint="@color/colorPrimary"
+        android:iconTintMode="src_in"/>
+    <item android:title="@string/calculate">
+
+        <menu>
+            <item
+                android:id="@+id/calculator"
+                android:icon="@drawable/calculator"
+                android:title="@string/calci"
+                android:iconTintMode="src_in"
+                />
+            <item
+                android:id="@+id/cdate"
+                android:icon="@drawable/date"
+                android:title="@string/Age"
+                android:iconTintMode="src_in"/>
+            <item
+                android:id="@+id/percent"
+                android:icon="@drawable/percentage"
+                android:title="@string/Percentage"
+                android:iconTintMode="src_in"/>
+            <item
+                android:id="@+id/bmi"
+                android:icon="@drawable/bmi"
+                android:title="@string/bmi"
+                android:iconTintMode="src_in"
+                />
+        </menu>
+    </item>
+    <item android:title="@string/convert">
+        <menu>
+            <item
+                android:id="@+id/curr"
+                android:icon="@drawable/currency"
+                android:title="@string/Currency"
+                android:iconTintMode="src_in"/>
+            <item
+                android:id="@+id/vol"
+                android:icon="@drawable/volume"
+                android:title="@string/Volume" />
+            <item
+                android:id="@+id/len"
+                android:icon="@drawable/length"
+                android:title="@string/Length" />
+            <item
+                android:id="@+id/wt"
+                android:icon="@drawable/weight"
+                android:title="@string/Weight" />
+            <item
+                android:id="@+id/temp"
+                android:icon="@drawable/temp"
+                android:title="@string/Temperature" />
+            <item
+                android:id="@+id/area"
+                android:icon="@drawable/area"
+                android:title="@string/Area" />
+            <item
+                android:id="@+id/power"
+                android:icon="@drawable/power"
+                android:title="@string/Power" />
+            <item
+                android:id="@+id/speed"
+                android:icon="@drawable/speed"
+                android:title="@string/Speed" />
+            <item
+                android:id="@+id/time"
+                android:icon="@drawable/time"
+                android:title="@string/Time" />
+            <item
+                android:id="@+id/data"
+                android:icon="@drawable/data"
+                android:title="@string/Data" />
+            <item
+                android:id="@+id/energy"
+                android:icon="@drawable/energy"
+                android:title="@string/Energy" />
+            <item
+                android:id="@+id/angle"
+                android:icon="@drawable/angle"
+                android:title="@string/Angle" />
+            <item
+                android:id="@+id/pressure"
+                android:icon="@drawable/pressure"
+                android:title="@string/Pressure" />
+            <item
+                android:id="@+id/frequency"
+                android:icon="@drawable/ic_frequency"
+                android:title="@string/Frequency" />
+            <item
+                android:id="@+id/datarate"
+                android:icon="@drawable/transfer"
+                android:title="@string/DataTransRate" />
+            <item
+                android:id="@+id/density"
+                android:icon="@drawable/density"
+                android:title="@string/densityTitle" />
+        </menu>
+    </item>
+
+</menu>
