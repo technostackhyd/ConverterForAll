@@ -180,6 +180,11 @@
     <string name="tan">tan</string>
     <string name="tan_inverse">tan<sup><small>-1</small></sup></string>
     <string name="fcm_message">FCM Message</string>
+    <string name="noplay">App not installed from playstore. Please download it from playstore to use!</string>
+    <string name="noplaystore">APP ALERT</string>
+    <string name="download">Download</string>
+    <string name="close">Close</string>
+    <string name="play_update_code">0</string>
 
     <string-array name="bmiWeightArray">
         <item>Kg</item>

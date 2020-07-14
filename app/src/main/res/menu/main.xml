@@ -8,12 +8,14 @@
                 android:id="@+id/feedback"
                 android:orderInCategory="100"
                 android:icon="@drawable/ic_feedback_black_24dp"
+                android:iconTint="@color/textColor"
                 android:title="@string/feedbackTitle"
                 app:showAsAction="ifRoom"/>
             <item
                 android:id="@+id/aboutus"
                 android:orderInCategory="100"
                 android:icon="@drawable/ic_info_outline_black_24dp"
+                android:iconTint="@color/textColor"
                 android:title="@string/info"
                 android:iconTintMode="src_in"
                 app:showAsAction="ifRoom" />
@@ -21,6 +23,7 @@
                 android:id="@+id/rate_us"
                 android:orderInCategory="100"
                 android:icon="@drawable/ic_stars_black_24dp"
+                android:iconTint="@color/textColor"
                 android:title="@string/rateUsTitle"
                 android:iconTintMode="src_in"
                 app:showAsAction="ifRoom"/>
@@ -28,6 +31,7 @@
                 android:id="@+id/share"
                 android:orderInCategory="100"
                 android:icon="@drawable/ic_share_black_24dp"
+                android:iconTint="@color/textColor"
                 android:title="@string/share"
                 android:iconTintMode="src_in"
                 app:showAsAction="ifRoom"/>
@@ -42,6 +46,7 @@
                 android:id="@+id/settings"
                 android:orderInCategory="100"
                 android:icon="@drawable/ic_settings_black_24dp"
+                android:iconTint="@color/textColor"
                 android:title="@string/settings"
                 android:iconTintMode="src_in"
                 app:showAsAction="ifRoom"/>

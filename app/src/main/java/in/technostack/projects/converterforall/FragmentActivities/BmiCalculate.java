@@ -55,7 +55,7 @@ public class BmiCalculate extends Fragment {
         list2= bmiView.findViewById(R.id.list2);
         result=bmiView.findViewById(R.id.result);
         link=bmiView.findViewById(R.id.link);
-        /*mAdView = new com.facebook.ads.AdView(getActivity(), "225154511577364_435911947168285", AdSize.RECTANGLE_HEIGHT_250);
+        mAdView = new com.facebook.ads.AdView(getActivity(), "225154511577364_435911947168285", AdSize.RECTANGLE_HEIGHT_250);
         AdListener adListener = new AdListener() {
             @Override
             public void onError(Ad ad, AdError adError) {
@@ -85,7 +85,7 @@ public class BmiCalculate extends Fragment {
         // Add the ad view to your activity layout
         adContainer.addView(mAdView);
         // Request an ad
-        mAdView.loadAd(loadAdConfig);*/
+        mAdView.loadAd(loadAdConfig);
         arrayList1=new ArrayList<>(Arrays.asList(getResources().getStringArray(R.array.bmiWeightArray)));
         arrayList2=new ArrayList<>(Arrays.asList(getResources().getStringArray(R.array.bmiHeightArray)));
         ArrayAdapter<String> adapter1 = new ArrayAdapter<String>(getActivity(), android.R.layout.simple_spinner_item, arrayList1);

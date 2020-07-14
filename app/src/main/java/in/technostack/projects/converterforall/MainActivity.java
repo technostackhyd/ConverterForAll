@@ -2,7 +2,9 @@ package in.technostack.projects.converterforall;
 
 import android.app.Fragment;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.IntentSender;
 import android.content.pm.ActivityInfo;
 import android.net.Uri;
 import android.os.Bundle;
@@ -10,11 +12,14 @@ import android.app.FragmentManager;
 import android.app.FragmentTransaction;
 import android.os.Handler;
 
-import com.google.android.gms.tasks.OnCompleteListener;
-import com.google.android.gms.tasks.Task;
+import com.google.android.play.core.appupdate.AppUpdateInfo;
+import com.google.android.play.core.appupdate.AppUpdateManager;
+import com.google.android.play.core.appupdate.AppUpdateManagerFactory;
+import com.google.android.play.core.install.model.AppUpdateType;
+import com.google.android.play.core.install.model.UpdateAvailability;
+import com.google.android.play.core.tasks.OnSuccessListener;
+import com.google.android.play.core.tasks.Task;
 import com.google.android.material.navigation.NavigationView;
-
-import androidx.annotation.NonNull;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.appcompat.app.ActionBarDrawerToggle;
@@ -27,8 +32,16 @@ import android.view.MenuItem;
 import android.widget.LinearLayout;
 import android.widget.Toast;
 
+/*import com.google.android.play.core.appupdate.AppUpdateInfo;
+import com.google.android.play.core.appupdate.AppUpdateManager;
+import com.google.android.play.core.appupdate.AppUpdateManagerFactory;*/
 import com.google.firebase.analytics.FirebaseAnalytics;
 import com.facebook.ads.*;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+
 import in.technostack.projects.converterforall.Classes.SharedPreferencesHelper;
 import in.technostack.projects.converterforall.Classes.ThemeHelper;
 import in.technostack.projects.converterforall.Dialogs.MyDialogs;
@@ -58,6 +71,26 @@ public class MainActivity extends AppCompatActivity
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         changeTitle("Converter");
+        //if(verifyInstallerId(this)){
+        if(true){
+            final AppUpdateManager appUpdateManager = AppUpdateManagerFactory.create(this);
+            Task<AppUpdateInfo> appUpdateInfoTask = appUpdateManager.getAppUpdateInfo();
+            appUpdateInfoTask.addOnSuccessListener(new OnSuccessListener<AppUpdateInfo>() {
+                @Override
+                public void onSuccess(AppUpdateInfo result) {
+                    if (result.updateAvailability() == UpdateAvailability.UPDATE_AVAILABLE && result.isUpdateTypeAllowed(AppUpdateType.FLEXIBLE)) {
+                        try {
+                            appUpdateManager.startUpdateFlowForResult(
+                                    result,
+                                    AppUpdateType.FLEXIBLE,
+                                    MainActivity.this,
+                                    getResources().getInteger(R.integer.play_update_code));
+                        } catch (IntentSender.SendIntentException e) {
+                            e.printStackTrace();
+                        }
+                    }
+                }
+            });
         cl=findViewById(R.id.fragments);
         DisplayMetrics displayMetrics = new DisplayMetrics();
         getWindowManager().getDefaultDisplay().getMetrics(displayMetrics);
@@ -80,18 +113,14 @@ public class MainActivity extends AppCompatActivity
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
         navigationView.setItemIconTintList(null);
-        /*mAdView = new com.facebook.ads.AdView(this, "225154511577364_225155771577238", AdSize.BANNER_HEIGHT_50);
+        mAdView = new com.facebook.ads.AdView(this, "225154511577364_225155771577238", AdSize.BANNER_HEIGHT_50);
         AdListener adListener = new AdListener() {
             @Override
             public void onError(Ad ad, AdError adError) {
-
             }
-
             @Override
             public void onAdLoaded(Ad ad) {
-
             }
-
             @Override
             public void onAdClicked(Ad ad) {
 
@@ -105,53 +134,54 @@ public class MainActivity extends AppCompatActivity
         AdView.AdViewLoadConfig loadAdConfig = mAdView.buildLoadAdConfig()
                 .withAdListener(adListener)
                 .build();
-        // Find the Ad Container
         LinearLayout adContainer = (LinearLayout) findViewById(R.id.technoOne);
-        // Add the ad view to your activity layout
         adContainer.addView(mAdView);
-        // Request an ad
-        AdSettings.addTestDevice("fbb3f244-7ea9-4122-ab5c-d2f68f3e5d1b");
-        mAdView.loadAd(loadAdConfig);*/
-        int count= SharedPreferencesHelper.getInt("reviewAppHome", 0, "reviewAppHome", Context.MODE_PRIVATE, this);
-        count++;
-        int favorites=SharedPreferencesHelper.getInt("favoritesCnt",0, "reviewAppHome", Context.MODE_PRIVATE, this);
-        if (favorites<2){
-            favorites++;
-            showDialog(getResources().getString(R.string.newfeature),getResources().getString(R.string.featuredetails),"",false);
-            SharedPreferencesHelper.putInt("favoritesCnt", favorites, "reviewAppHome", Context.MODE_PRIVATE, this);
-        }
-        else {
-            if (count<5) {
-                SharedPreferencesHelper.putInt("reviewAppHome", count, "reviewAppHome", Context.MODE_PRIVATE, this);
-                if (SharedPreferencesHelper.getBoolean("isFirstPro", true, "isFirstPro", Context.MODE_PRIVATE, this)) {
-                    new Handler().postDelayed(new Runnable() {
-                        @Override
-                        public void run() {
-                            showDialog(getResources().getString(R.string.getProTitle), getResources().getString(R.string.pro), "auto",false);
-                        }
-                    }, 1000);
-                }
+        //AdSettings.addTestDevice("fbb3f244-7ea9-4122-ab5c-d2f68f3e5d1b");
+        mAdView.loadAd(loadAdConfig);
+            int count= SharedPreferencesHelper.getInt("reviewAppHome", 0, "reviewAppHome", Context.MODE_PRIVATE, this);
+            count++;
+            int favorites=SharedPreferencesHelper.getInt("favoritesCnt",0, "reviewAppHome", Context.MODE_PRIVATE, this);
+            if (favorites<2){
+                favorites++;
+                showDialog(getResources().getString(R.string.newfeature),getResources().getString(R.string.featuredetails),"",false);
+                SharedPreferencesHelper.putInt("favoritesCnt", favorites, "reviewAppHome", Context.MODE_PRIVATE, this);
             }
-            else
-            {
-                if (!SharedPreferencesHelper.getBoolean("shown",false, "isFirstPro", Context.MODE_PRIVATE, this) || !SharedPreferencesHelper.getBoolean("alreadyCLicked",false, "isFirstPro", Context.MODE_PRIVATE, this))
+            else {
+                if (count<5) {
+                    SharedPreferencesHelper.putInt("reviewAppHome", count, "reviewAppHome", Context.MODE_PRIVATE, this);
+                    if (SharedPreferencesHelper.getBoolean("isFirstPro", true, "isFirstPro", Context.MODE_PRIVATE, this)) {
+                        new Handler().postDelayed(new Runnable() {
+                            @Override
+                            public void run() {
+                                showDialog(getResources().getString(R.string.getProTitle), getResources().getString(R.string.pro), "auto",false);
+                            }
+                        }, 1000);
+                    }
+                }
+                else
                 {
-                    SharedPreferencesHelper.putInt("reviewAppHome", 0, "reviewAppHome", Context.MODE_PRIVATE, this);
-                    SharedPreferencesHelper.putBoolean("shown", true, "isFirstPro", Context.MODE_PRIVATE, this);
-                    if (!SharedPreferencesHelper.getBoolean("alreadyClicked",false, "isFirstPro", Context.MODE_PRIVATE, this))
-                        showDialog(getResources().getString(R.string.rateUsTitle), getString(R.string.rating), "", true);
-                }
+                    if (!SharedPreferencesHelper.getBoolean("shown",false, "isFirstPro", Context.MODE_PRIVATE, this) || !SharedPreferencesHelper.getBoolean("alreadyCLicked",false, "isFirstPro", Context.MODE_PRIVATE, this))
+                    {
+                        SharedPreferencesHelper.putInt("reviewAppHome", 0, "reviewAppHome", Context.MODE_PRIVATE, this);
+                        SharedPreferencesHelper.putBoolean("shown", true, "isFirstPro", Context.MODE_PRIVATE, this);
+                        if (!SharedPreferencesHelper.getBoolean("alreadyClicked",false, "isFirstPro", Context.MODE_PRIVATE, this))
+                            showDialog(getResources().getString(R.string.rateUsTitle), getString(R.string.rating), "", true);
+                    }
 
+                }
+            }
+            if(fr!=null){
+                fragmentTransaction.replace(R.id.fragments,fr).commit();
+            }
+            else {
+                fragmentManager=getFragmentManager();
+                fragmentTransaction=fragmentManager.beginTransaction();
+                fr=new Home();
+                fragmentTransaction.replace(R.id.fragments,fr).commit();
             }
         }
-        if(fr!=null){
-            fragmentTransaction.replace(R.id.fragments,fr).commit();
-        }
-        else {
-            fragmentManager=getFragmentManager();
-            fragmentTransaction=fragmentManager.beginTransaction();
-            fr=new Home();
-            fragmentTransaction.replace(R.id.fragments,fr).commit();
+        else{
+            showDialog(getResources().getString(R.string.noplaystore), getResources().getString(R.string.noplay), "NOPLAY", false);
         }
         mFirebaseAnalytics = FirebaseAnalytics.getInstance(this);
     }
@@ -290,6 +320,10 @@ public class MainActivity extends AppCompatActivity
         dd.message=message;
         dd.WHO=WHO;
         dd.rating=rate;
+        if(getResources().getString(R.string.noplaystore).equals(title)){
+            dd.setCancelable(false);
+        }
+        dd.setCancelable(false);
         try {
             dd.show(fm,"");
         }
@@ -321,7 +355,24 @@ public class MainActivity extends AppCompatActivity
 
         }
     }
+    boolean verifyInstallerId(Context context) {
+        // A list with valid installers package name
+        List<String> validInstallers = new ArrayList<>(Arrays.asList("com.android.vending", "com.google.android.feedback"));
+        // The package name of the app that has installed your app
+        final String installer = context.getPackageManager().getInstallerPackageName(context.getPackageName());
 
+        // true if your app has been downloaded from Play Store
+        return installer != null && validInstallers.contains(installer);
+    }
+    @Override
+    public void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        if (requestCode == getResources().getInteger(R.integer.play_update_code)) {
+            if (resultCode != RESULT_OK) {
+
+            }
+        }
+    }
     @Override
     protected void onDestroy() {
         if (mAdView != null) {

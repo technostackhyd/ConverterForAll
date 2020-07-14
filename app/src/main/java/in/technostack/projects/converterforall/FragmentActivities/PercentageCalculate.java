@@ -60,7 +60,7 @@ public class PercentageCalculate extends Fragment {
         L22.setVisibility(View.GONE);
         L32.setVisibility(View.GONE);
         L42.setVisibility(View.GONE);
-        /*mAdView = new com.facebook.ads.AdView(getActivity(), "225154511577364_435912303834916", AdSize.RECTANGLE_HEIGHT_250);
+        mAdView = new com.facebook.ads.AdView(getActivity(), "225154511577364_435912303834916", AdSize.RECTANGLE_HEIGHT_250);
         AdListener adListener = new AdListener() {
             @Override
             public void onError(Ad ad, AdError adError) {
@@ -90,7 +90,7 @@ public class PercentageCalculate extends Fragment {
         // Add the ad view to your activity layout
         adContainer.addView(mAdView);
         // Request an ad
-        mAdView.loadAd(loadAdConfig);*/
+        mAdView.loadAd(loadAdConfig);
 
         L11.setOnClickListener(new View.OnClickListener() {
             @Override

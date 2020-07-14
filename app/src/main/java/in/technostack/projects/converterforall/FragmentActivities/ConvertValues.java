@@ -48,9 +48,6 @@ import com.android.volley.RetryPolicy;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.JsonObjectRequest;
 import com.android.volley.toolbox.Volley;
-/*import com.google.android.gms.ads.AdRequest;
-import com.google.android.gms.ads.AdView;
-import com.google.android.gms.ads.MobileAds;*/
 import org.json.JSONArray;
 import org.json.JSONObject;
 import java.math.BigDecimal;
@@ -482,7 +479,7 @@ public class ConvertValues extends Fragment {
                 swap.startAnimation(animation);
             }
         });
-        /*mAdView = new com.facebook.ads.AdView(getActivity(), "225154511577364_435910703835076", AdSize.RECTANGLE_HEIGHT_250);
+        mAdView = new com.facebook.ads.AdView(getActivity(), "225154511577364_435910703835076", AdSize.RECTANGLE_HEIGHT_250);
         AdListener adListener = new AdListener() {
             @Override
             public void onError(Ad ad, AdError adError) {
@@ -513,7 +510,7 @@ public class ConvertValues extends Fragment {
         adContainer.addView(mAdView);
         // Request an ad
         //AdSettings.addTestDevice("fbb3f244-7ea9-4122-ab5c-d2f68f3e5d1b");
-        mAdView.loadAd(loadAdConfig);*/
+        mAdView.loadAd(loadAdConfig);
         setScreen(activeConvert);
         return view;
     }

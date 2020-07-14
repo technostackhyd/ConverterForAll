@@ -38,10 +38,10 @@ public class MyDialogs extends DialogFragment {
         AlertDialog.Builder builder = new AlertDialog.Builder(getActivity(),R.style.MyDialogTheme);
         LayoutInflater inflater= getActivity().getLayoutInflater();
         view=inflater.inflate(R.layout.dialogs,null);
-        TextView title=(TextView) view.findViewById(R.id.title);
-        TextView content=(TextView) view.findViewById(R.id.content);
-        TextView txtView=(TextView) view.findViewById(R.id.loadText);
-        ProgressBar bar=(ProgressBar) view.findViewById(R.id.pBar);
+        TextView title= view.findViewById(R.id.title);
+        TextView content= view.findViewById(R.id.content);
+        TextView txtView= view.findViewById(R.id.loadText);
+        ProgressBar bar= view.findViewById(R.id.pBar);
         final CheckBox dontShow=view.findViewById(R.id.dontShow);
         positive=getResources().getString(R.string.ok);
         preferences=getActivity().getSharedPreferences("reviewAppHome",Context.MODE_PRIVATE);
@@ -76,11 +76,15 @@ public class MyDialogs extends DialogFragment {
                             if (preferences.getBoolean("isFirstPro", true)) {
                                 SharedPreferences.Editor editor = preferences.edit();
                                 editor.putBoolean("isFirstPro", false);
-                                editor.commit();
+                                editor.apply();
                             }
                         }
                     }
                 });
+            }
+            else if (sTitle.contains(getResources().getString(R.string.noplaystore))) {
+                positive=getResources().getString(R.string.download);
+                negative=getResources().getString(R.string.close);
             }
             else if (swap){
                 builder.setNegativeButton(getResources().getString(R.string.swapdates), new DialogInterface.OnClickListener() {
@@ -91,7 +95,6 @@ public class MyDialogs extends DialogFragment {
                 });
             }
             else if (rating){
-                if (rating)
                     positive=getResources().getString(R.string.ratenow);
                 if (!preferences.getBoolean("rateNowClicked",false)) {
                     builder.setNegativeButton(getResources().getString(R.string.later), new DialogInterface.OnClickListener() {
@@ -106,7 +109,7 @@ public class MyDialogs extends DialogFragment {
                         @Override
                         public void onClick(DialogInterface dialogInterface, int i) {
                             editor.putBoolean("alreadyClicked",true);
-                            editor.commit();
+                            editor.apply();
                         }
                     });
                 }
@@ -149,6 +152,14 @@ public class MyDialogs extends DialogFragment {
                                 getActivity().startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse(URL4)));
                             }
                         }
+                        else if(positive.equals(getResources().getString(R.string.download))){
+                            try {
+                                getActivity().startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse(URL3)));
+                            }
+                            catch (Exception e){
+                                getActivity().startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse(URL4)));
+                            }
+                        }
                 }
             });
         }
@@ -158,7 +169,7 @@ public class MyDialogs extends DialogFragment {
     @Override
     public void onStart() {
         super.onStart();
-        ((AlertDialog) getDialog()).getWindow().setBackgroundDrawable(getResources().getDrawable(R.drawable.layout_bg));
+        getDialog().getWindow().setBackgroundDrawable(getResources().getDrawable(R.drawable.layout_bg));
         ((AlertDialog) getDialog()).getButton(AlertDialog.BUTTON_POSITIVE).setTextColor(getResources().getColor(R.color.textColor));
         ((AlertDialog) getDialog()).getButton(AlertDialog.BUTTON_NEGATIVE).setTextColor(getResources().getColor(R.color.textColor));
         ((AlertDialog) getDialog()).getButton(AlertDialog.BUTTON_NEUTRAL).setTextColor(getResources().getColor(R.color.textColor));
